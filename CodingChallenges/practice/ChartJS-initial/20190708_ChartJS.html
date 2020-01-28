@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+        <title> ChartJS Fetch Practice </title>   
+    </head>
+<body>
+   <img src="" id="rainbow"/>
+</body>
+
+<script>
+    console.log('about to fetch a rainbow');
+    // invokes the catchRainbow() function
+    catchRainbow()
+    // if the response comes back true we log yay
+    .then(response => {
+        console.log('yay');
+    })
+    // if there was an error along the way then we will log that error
+    .catch(error => {
+        console.log('error!');
+        console.error(error);
+    })
+    // describes an asynchronous function that fetches a jpg file
+    // and converts it to display in the proper format
+    async function catchRainbow() {
+        // the response is what we get back from the async function through await
+        // will fire once the fetch promise completes
+        const response = await fetch('rainbow.jpg');
+        // then we can take that response and convert it into a blob
+        const blob = await response.blob();
+        // then we can take that blob and inject it to the dom
+        // after converting it's formatting
+        document.getElementById('rainbow').src = URL.createObjectURL(blob);
+    }
+
+    // DOES THE SAME AS THE ABOVE CODE IN DIFFERENT SYNTAX
+    // fetch('rainbow.jpg').then(response => {
+    //     console.log(response);
+    //     return response.blob();
+    // })
+    // .then(blob => {
+    //     console.log(blob);
+    //     document.getElementById('rainbow').src  = URL.createObjectURL(blob);
+    // })
+    // .catch(error => {
+    //     console.log('error!');
+    //     console.error(error);
+    // });
+</script>
+
+
+
+</html>
+
+
+

@@ -1,0 +1,43 @@
+{
+  "coord": {
+    "lon": -81.69,
+    "lat": 41.51
+  },
+  "weather": [
+    {
+      "id": 701,
+      "main": "Mist",
+      "description": "mist",
+      "icon": "50d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 70.97,
+    "pressure": 1011,
+    "humidity": 88,
+    "temp_min": 68,
+    "temp_max": 73.4
+  },
+  "visibility": 8047,
+  "wind": {
+    "speed": 10.29,
+    "deg": 190
+  },
+  "clouds": {
+    "all": 90
+  },
+  "dt": 1566927138,
+  "sys": {
+    "type": 1,
+    "id": 3602,
+    "message": 0.0097,
+    "country": "US",
+    "sunrise": 1566902866,
+    "sunset": 1566950961
+  },
+  "timezone": -14400,
+  "id": 5150529,
+  "name": "Cleveland",
+  "cod": 200
+}
